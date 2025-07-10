@@ -112,8 +112,7 @@ if uploaded_files:
         # Show assistant response
         st.write("Assistant:", response["answer"])
 
-        # Show chat history inside an expander (collapsible section)
-        with st.expander("🔁 View Chat History"):
+        with st.expander("View Chat History"):
             for msg in session_history.messages:
                 if isinstance(msg, HumanMessage):
                     st.markdown(f"**User:** {msg.content}")
@@ -121,10 +120,5 @@ if uploaded_files:
                     st.markdown(f"**Assistant:** {msg.content}")
                 else:
                     st.markdown(f"**{type(msg).__name__}:** {msg.content}")
-
-        # Show session_state.store (for debugging)
-        with st.expander("🧠 View session_state.store"):
+        with st.expander(" View session_state.store"):
             st.json({k: [m.content for m in v.messages] for k, v in st.session_state.store.items()})
-
-                
-                                                     
