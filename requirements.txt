@@ -1,0 +1,14 @@
+streamlit
+langchain
+langchain-community
+langchain-ollama
+langchain-text-splitters
+langchain-core
+langsmith
+langchain-community
+langchain-groq
+faiss-cpu
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+pypdf
