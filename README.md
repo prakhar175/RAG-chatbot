@@ -11,11 +11,13 @@ A powerful Retrieval-Augmented Generation (RAG) application built with Streamlit
 - **Context-Aware Responses**: Understands conversation context and references
 - **Session Management**: Multiple conversation sessions with unique IDs
 - **Real-time Chat Interface**: Interactive Streamlit-based UI
+- **LangChain Tracing**: Built-in monitoring and debugging with LangSmith
 
 ## 🛠️ Technologies Used
 
 - **Streamlit**: Web application framework
 - **LangChain**: Framework for building LLM applications
+- **LangSmith**: Tracing and monitoring for LangChain applications
 - **Groq**: Fast inference API for LLaMA models
 - **Chroma**: Vector database for document storage
 - **HuggingFace**: Embeddings model (BAAI/bge-small-en-v1.5)
@@ -25,7 +27,9 @@ A powerful Retrieval-Augmented Generation (RAG) application built with Streamlit
 
 - Python 3.8+
 - Groq API key
+- LangChain API key (for tracing)
 - HuggingFace token (optional, for embeddings)
+
 
 ## 🔧 Installation
 
@@ -44,6 +48,7 @@ A powerful Retrieval-Augmented Generation (RAG) application built with Streamlit
    Create a `.env` file in the root directory:
    ```env
    GROQ_API_KEY=your_groq_api_key_here
+   LANGCHAIN_API_KEY=your_langchain_api_key_here
    HF_TOKEN=your_huggingface_token_here
    ```
 
@@ -100,6 +105,10 @@ sentence-transformers
    - Each session maintains its own chat history
    - Conversation context is preserved across interactions
 
+4. **Tracing & Monitoring**:
+   - LangSmith integration provides detailed insights into chain performance
+   - Real-time monitoring of RAG pipeline operations
+
 ## 🔍 Key Components
 
 ### Vector Store Configuration
@@ -114,6 +123,11 @@ sentence-transformers
 ### Retrieval Chain
 - History-aware retriever for context understanding
 - Combines document retrieval with conversational memory
+
+### Tracing Configuration
+- **LangSmith Project**: "RAG Memory App"
+- **Tracing Enabled**: Full pipeline monitoring
+- **Debug Mode**: Real-time performance insights
 
 ## 📁 Project Structure
 
@@ -133,6 +147,12 @@ rag-memory-app/
 2. Create an account and generate an API key
 3. Add it to your `.env` file
 
+### LangChain API Key (for Tracing)
+1. Visit [LangSmith](https://smith.langchain.com)
+2. Create an account and generate an API key
+3. Add it to your `.env` file
+4. This enables tracing and monitoring of your RAG chains
+
 ### HuggingFace Token (Optional)
 1. Visit [HuggingFace](https://huggingface.co)
 2. Create an account and generate a token
@@ -144,4 +164,5 @@ rag-memory-app/
 - **Session Management**: Unique session IDs for multiple conversations
 - **Chat History**: Expandable section showing conversation history
 - **Debug View**: Session state viewer for development
+- **LangChain Tracing**: Real-time monitoring of RAG pipeline performance
 - **Real-time Responses**: Instant answers to user queries
