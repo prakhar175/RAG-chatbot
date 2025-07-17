@@ -52,24 +52,6 @@ A powerful Retrieval-Augmented Generation (RAG) application built with Streamlit
    HF_TOKEN=your_huggingface_token_here
    ```
 
-## 📦 Required Dependencies
-
-Create a `requirements.txt` file with the following packages:
-
-```txt
-streamlit
-python-dotenv
-langchain
-langchain-groq
-langchain-community
-langchain-huggingface
-langchain-text-splitters
-langchain-chroma
-chromadb
-pypdf
-sentence-transformers
-```
-
 ## 🚀 Usage
 
 1. **Start the application**
