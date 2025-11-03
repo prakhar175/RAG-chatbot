@@ -26,7 +26,7 @@ embeddings= HuggingFaceEmbeddings(
     model_name="BAAI/bge-small-en-v1.5",
 )
 
-st.title("RAG Memory App with PDF uploadable")
+st.title("RDigital Wellness Project")
 st.write("Upload the PDF and chat regarding the content.")
 
 llm = ChatGroq(
