@@ -14,11 +14,14 @@ from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 load_dotenv()
-os.environ["HF_TOKEN"]= os.getenv("HF_TOKEN")
-os.environ["LANGCHAIN_API_KEY"] = os.getenv("LANGCHAIN_API_KEY")
+import streamlit as st
+import os
+
+os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
+os.environ["LANGCHAIN_API_KEY"] = st.secrets["LANGCHAIN_API_KEY"]
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = "RAG Memory App"
-groq=os.getenv("GROQ_API_KEY")
+groq = st.secrets["GROQ_API_KEY"]
 embeddings= HuggingFaceEmbeddings(
     model_name="BAAI/bge-small-en-v1.5",
 )
