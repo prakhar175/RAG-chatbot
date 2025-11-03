@@ -26,8 +26,8 @@ embeddings= HuggingFaceEmbeddings(
     model_name="BAAI/bge-small-en-v1.5",
 )
 
-st.title("RDigital Wellness Project")
-st.write("Upload the PDF and chat regarding the content.")
+st.title("Digital Wellness Project")
+st.write("Upload the PDFs.")
 
 llm = ChatGroq(
     groq_api_key=groq,
