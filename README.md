@@ -1,5 +1,6 @@
 # RAG Memory App with PDF Upload
 
+need updation to be compatible with langchain 1.x
 A powerful Retrieval-Augmented Generation (RAG) application built with Streamlit that allows users to upload PDF documents and have intelligent conversations about their content using LangChain and Groq's LLaMA model.
 
 ## 🚀 Features
